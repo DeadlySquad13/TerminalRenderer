@@ -1,5 +1,5 @@
-# Triangle contains point if it's inside or outside all of it's half panes
-# (each side divides plane into two parts).
+# Triangle contains point if point is inside or outside all of the half panes
+# (each side of the triangle divides plane into two parts).
 #
 # Reference: https://www.cyberforum.ru/algorithms/thread144722.html
 def triangle_contains_point(x, y, point1, point2, point3):
@@ -9,7 +9,7 @@ def triangle_contains_point(x, y, point1, point2, point3):
 
     #   If some of the half_panes equals to 0, then point is inside
     # corresponding border of the triangle. We assume that triangle contains
-    # it.
+    # it in this case.
     return half_pane1 >= 0 and half_pane2 >= 0 and half_pane3 >= 0 or \
         half_pane1 <= 0 and half_pane2 <= 0 and half_pane3 <= 0
 
